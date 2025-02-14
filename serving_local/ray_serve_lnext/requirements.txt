@@ -1,0 +1,7 @@
+torch
+ray[serve]
+fastapi
+transformers
+starlette
+bitsandbytes
+accelerate

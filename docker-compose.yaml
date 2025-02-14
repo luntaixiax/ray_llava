@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  llava_service:
+    image: ray_serve_lnext:latest
+    #build: ray_serve_lnext/Dockerfile
+    environment:
+      - my_arbitrary_key=value
+      - key2=var2
+    ports:
+      - 8000:8000
+      - 8265:8265
+    # volumes:
+    #   #- .:/home
+    shm_size: 20gb
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  llava_frontend:
+    image: llava_frontend
+    ports:
+      - 8501:8501
