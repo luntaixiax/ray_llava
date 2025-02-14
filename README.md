@@ -1,4 +1,4 @@
-# Lab - Build LLAVA Chatbot backed by Ray Serve
+# Build LLAVA Chatbot backed by Ray Serve
 
 # Prerequisite
 
